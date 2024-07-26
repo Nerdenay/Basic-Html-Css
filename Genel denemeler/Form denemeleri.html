@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Form</title>
+
+    </head>
+
+    <!-- An HTML form is used to collect user input. The user input is most often sent to a server for processing.-->
+    <!-- The HTML <form> element is used to create an HTML form for user input, The <form> element is a container for different types of input elements.
+        - The HTML <input> element is the most used form element. 
+        - An <input> element can be displayed in many ways, depending on the type attribute.
+        - The <input type="text"> defines a single-line input field for text input.  -->
+
+    <body>
+
+        <h1>Üye Kayit Formu:</h1>
+        <form name="Kayit" method="get">     <!-- action="kayit.aspx vb koyarsan o dosyaya veya sayfaya vb gider kayılar"-->
+            <table>                                              <!-- Diğer türlü normal olduğu sayfaya gider veriler-->
+                <tr><td>Ad Soyad:</td> <td><input type="text" name="adsoayad"></td></tr>
+                <tr><td>Email:<td><input type="email" name ="enmail"></td></tr>
+                <tr><td></td><td><input type="submit"><input type="reset"></td></tr>
+            </table>
+        </form>
+
+        <h1>Secenekler</h1>
+        <form name="secenek">
+            <input type="radio" name="secenek" value="Elden Ring">Elden Ring
+            <input type="radio" name="secenek" value="Baldur's Gate 3">Baldur's Gate 
+            <input type="radio" name="secenek" value="Valheim">Valheim
+            <br>
+            <input type="submit">
+        </form>
+
+        <h1>Onay Kutusu</h1>
+        <form name="Onay">
+            <input type="checkbox" name="izler"> Anime İzlerim
+            <br>
+            <input type="checkbox" name="okul">Öğrenciyim
+            <br>
+            <input type="submit" valeu="Onayla">
+        </form>
+
+        <h1>Birden cok secenek</h1>
+        <form>
+            Doğum yeri:
+            <select name="iller">
+                <option>Adana</option>
+                <option>Antalya</option>
+                <option>Ankara</option>
+                <option>İstanbul</option>
+            </select>
+            <br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+
+        <h2>Resimli Form</h2>
+        <form name="resimli onay" method="get">
+            Okul İsmi: 
+            <input type="text" name="OkuName">
+            <br>
+            <input type="image" src="png-clipart-submit-button-illustration-submit-button-icons-logos-emojis-submit.png" width="100">
+        </form>
+
+        <h3> Farkli halleri </h3>
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname">
+        </form>
+
+         <!-- *The <label> element is useful for screen-reader users, because the screen-reader will read out loud the label
+            when the user focuses on the input element. 
+              *The <label> element also helps users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - 
+            because when the user clicks the text within the <label> element, it toggles the radio button/checkbox.
+              *The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together.-->
+        
+         <form>
+            Choose your favorite one:
+            <br>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+        </form>
+
+        <form action="/action_page.php">
+            <label for="fname">Ad:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Soy ad:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+            <input type="submit" value="Submit">
+          </form>
+
+    </body>
+</html>
+
+
+
+
+
+<!-- 
+*Radio buttons let a user select ONE of a limited number of choices. 
+*Checkboxes let a user select ZERO or MORE options of a limited number of choices.
+*Label sayesinde yazıya tıklasında işaretlenir.
+*The action attribute defines the action to be performed when the form is submitted.
+*Usually, the form data is sent to a file on the server when the user clicks on the submit button.
+*The method attribute specifies the HTTP method to be used when submitting the form data.
+*The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post").
+*The default HTTP method when submitting form data is GET. 
+! NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!)
+! The length of a URL is limited (2048 characters)
+! Useful for form submissions where a user wants to bookmark the result
+! GET is good for non-secure data, like query strings in Google
+0 POST has no size limitations, and can be used to send large amounts of data.
+0 Form submissions with POST cannot be bookmarked
+-->
